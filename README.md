@@ -48,3 +48,12 @@ export default tseslint.config({
   },
 })
 ```
+
+
+## feat: setup React with Vite, TypeScript, and Shadcn UI
+
+- Initialized Vite project with React and TypeScript support
+- Integrated Shadcn UI for component styling
+- Configured basic project structure
+- Added sample Shadcn components for initial testing
+
