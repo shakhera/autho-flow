@@ -1,13 +1,14 @@
 import { Menubar, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to manage mobile menu visibility
 
-  const toggleMenu = () => {
-    setIsOpen((prev) => !prev);
-  };
+  // const toggleMenu = () => {
+  //   setIsOpen((prev) => !prev);
+  // };
 
   return (
     <Menubar className="bg-white shadow-md flex justify-between items-center md:px-6 py-8">
@@ -22,8 +23,11 @@ const Navbar = () => {
         </MenubarMenu>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={toggleMenu}
+        <Button
+          // onClick={ setIsOpen((prev) => !prev)}
+          onClick={() => setIsOpen((prev) => !prev)}
+          // onClick={toggleMenu}
+
           className="md:hidden p-2 focus:outline-none"
         >
           <svg
@@ -49,7 +53,7 @@ const Navbar = () => {
               />
             )}
           </svg>
-        </button>
+        </Button>
       </div>
 
       {/* Menu Items */}

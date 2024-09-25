@@ -1,5 +1,11 @@
+import UserTable from "../UserTable/UserTable";
+
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <UserTable />
+    </div>
+  );
 };
 
 export default Home;
